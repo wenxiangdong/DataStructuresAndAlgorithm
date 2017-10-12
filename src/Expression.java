@@ -84,6 +84,8 @@ public class Expression {
         results.push(value);
     }
 
+
+    //输入格式为 表达式加上'#'结束，不能出现空格
     public static void main(String[] args) {
         Expression expression = new Expression();
         BufferedReader reader = new BufferedReader(
@@ -101,7 +103,7 @@ public class Expression {
         Stack<Character> operation = new Stack<>();
         operation.push('#');
 
-        int numberBegin=1;//数字在字符串中的起始位置
+        int numberBegin=0;//数字在字符串中的起始位置
         char top,coming=s.charAt(0);
         for(int i = 0; !operation.isEmpty();){
 
